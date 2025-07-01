@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metenos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lobster+Two&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background-color: #0d0d0d;
+      color: #f5f5f5;
+    }
+    header {
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-family: 'Lobster Two', cursive;
+      font-size: 2.5rem;
+      background: linear-gradient(to right, #ff6a00, #ff3399);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    nav a {
+      color: #fff;
+      margin-left: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      position: relative;
+      text-align: center;
+      background-image: url("https://materdyjo.github.io/logo2/ChatGPT%20Image%201%20lip%202025,%2019_33_01.png");
+      background-size: cover;
+      background-position: center;
+      height: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      max-width: 90%;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      margin: 0;
+      line-height: 1.2;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+    }
+    .hero button {
+      margin-top: 1.5rem;
+      background: linear-gradient(to right, #ff6a00, #ff3399);
+      color: white;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255,106,0,0.6);
+    }
+    .section {
+      padding: 3rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .section h2 {
+      color: #ff6a00;
+      margin-bottom: 1rem;
+    }
+    .step {
+      margin-bottom: 2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.875rem;
+      background: #111;
+      color: #666;
+    }
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Metenos</div>
+    <nav>
+      <a href="#how">Jak to działa</a>
+      <a href="#about">O nas</a>
+      <a href="#cta">Zapisz się</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Poznaj.<br>Połącz się.<br>Przeżyj.</h1>
+      <button onclick="document.getElementById('cta').scrollIntoView({ behavior: 'smooth' })">Zapisz się na listę oczekujących</button>
+    </div>
+  </section>
+  <section class="section" id="how">
+    <h2>Jak to działa?</h2>
+    <div class="step">
+      <strong>1.</strong> Odpowiedz na krótki quiz – pomoże nam dobrać ludzi do Twojej kolacji.
+    </div>
+    <div class="step">
+      <strong>2.</strong> Dostaniesz info o lokalizacji
+    </div>
+    <div class="step">
+      <strong>3.</strong> Spotkaj się z nimi na żywo i przeżyj coś nowego.
+    </div>
+  </section>
+  <section class="section" id="about">
+    <h2>Czym jest Metenos?</h2>
+    <p>To aplikacja, która łączy nieznajomych na wspólnych kolacjach – bez oceniania, bez randkowania, z naciskiem na prawdziwą rozmowę.</p>
+  </section>
+  <section class="section" id="cta">
+    <h2>Dołącz teraz</h2>
+    <p>Zapisz się na listę oczekujących i odbierz dostęp przed premierą:</p>
+    <form action="https://formsubmit.co/info@metenos.com" method="POST">
+      <input type="hidden" name="_subject" value="Nowy zapis z Metenos!">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="email" name="email" required placeholder="Twój e-mail" style="padding:0.5rem 1rem; border:none; border-radius:5px; width:70%; max-width:300px;">
+      <button type="submit" style="margin-top:1rem; display:block; background:#ff6a00; color:#fff; padding:0.5rem 1.5rem; border:none; border-radius:20px;">Zapisz się</button>
+    </form>
+  </section>
+  <footer>
+    &copy; 2025 Metenos. Wszelkie prawa zastrzeżone.
+  </footer>
+</body>
+</html>
